@@ -7,9 +7,9 @@ function App() {
   return(
     <BrowserRouter>
         <Routes>
-            <Route exact path={"/"}  element={<HomePage />} />
-            <Route exact path={"/projects"} element={<ProjectsPage />} />
-            <Route exact path={"/resume"} element={<ResumePage />} />
+            <Route exact path={"/"}  element={<HomePage className='flex h-full w-full' />} />
+            {/*<Route exact path={"/projects"} element={<ProjectsPage />} />
+            <Route exact path={"/resume"} element={<ResumePage />} />*/}
             <Route path={"*"} element={<Navigate to="/" replace />} />
         </Routes>
     </BrowserRouter>
