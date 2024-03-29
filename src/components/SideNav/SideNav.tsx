@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ReactComponent as DiplomaSVG} from '../../icons/diploma.svg';
 import { ReactComponent as ProjectsSVG} from '../../icons/projects.svg';
 import { ReactComponent as HomeSVG  } from '../../icons/home.svg';
@@ -15,7 +15,7 @@ const SideNav: React.FC<SideNavProps> = ({ currTab, tabSetter }) => {
 
 
   return (
-      <div className=" bg-slate-300 rounded-full h-full px-3 flex flex-col justify-evenly">
+      <div className=" bg-slate-300 rounded-full h-2/6 px-3 flex flex-col justify-evenly">
         <div className={`${currTab === TabEnum.HOME && 'bg-white'} rounded-full p-3`}>
           <Link to ="/"><HomeSVG className="w-10 h-10 cursor-pointer" onClick={()=> tabSetter(TabEnum.HOME)}/></Link>
         </div>
