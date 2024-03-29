@@ -2,32 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { ReactComponent as DiplomaSVG} from '../../icons/diploma.svg';
 import { ReactComponent as ProjectsSVG} from '../../icons/projects.svg';
 import { ReactComponent as HomeSVG  } from '../../icons/home.svg';
+import { TabEnum } from '../../enum/TabEnum';
+import { Link } from 'react-router-dom';
 
-enum SideNavItems {
-  DIPLOMA = 'diploma',
-  PROJECTS = 'projects',
-  HOME = 'home'
+interface SideNavProps {
+  currTab: string;
+  tabSetter: (tab: TabEnum) => void;
 }
 
-const SideNav = () => {
 
-  const [curr, setCurr] = useState<SideNavItems>(SideNavItems.HOME);
+const SideNav: React.FC<SideNavProps> = ({ currTab, tabSetter }) => {
 
-  useEffect(() => {
-    console.log(curr);
-
-  }, [curr]);
 
   return (
       <div className=" bg-slate-300 rounded-full h-full px-3 flex flex-col justify-evenly">
-        <div className={`${curr === SideNavItems.HOME && 'bg-white'} rounded-full p-3`}>
-          <HomeSVG className="w-10 h-10 cursor-pointer" onClick={()=> setCurr(SideNavItems.HOME)}/>
+        <div className={`${currTab === TabEnum.HOME && 'bg-white'} rounded-full p-3`}>
+          <Link to ="/"><HomeSVG className="w-10 h-10 cursor-pointer" onClick={()=> tabSetter(TabEnum.HOME)}/></Link>
         </div>
-        <div className={`${curr === SideNavItems.DIPLOMA && 'bg-white'} rounded-full p-3`}>
-          <DiplomaSVG className="w-10 h-10 cursor-pointer" onClick={()=> setCurr(SideNavItems.DIPLOMA)} />
+        <div className={`${currTab === TabEnum.DIPLOMA && 'bg-white'} rounded-full p-3`}>
+          <Link to ="/resume"><DiplomaSVG className="w-10 h-10 cursor-pointer" onClick={()=> tabSetter(TabEnum.DIPLOMA)} /></Link>
         </div>
-        <div className={`${curr === SideNavItems.PROJECTS && 'bg-white'} rounded-full p-3`}>
-          <ProjectsSVG className="w-10 h-10 cursor-pointer" onClick={()=> setCurr(SideNavItems.PROJECTS)} />
+        <div className={`${currTab === TabEnum.PROJECTS && 'bg-white'} rounded-full p-3`}>
+          <Link to ="/projects"><ProjectsSVG className="w-10 h-10 cursor-pointer" onClick={()=> tabSetter(TabEnum.PROJECTS)} /></Link>  
         </div>
     </div>
   );
