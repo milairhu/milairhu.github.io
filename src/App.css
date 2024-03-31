@@ -39,13 +39,13 @@
 }
 
 
-a {
+.link-underlined {
   color: white;
   text-decoration: none;
   position: relative;
 }
 
-a::after {
+.link-underlined::after {
   content: "";
   position: absolute;
   width: 0;
@@ -57,7 +57,7 @@ a::after {
   transition: all 0.3s ease-in-out;
 }
 
-a:hover::after {
+.link-underlined:hover::after {
   visibility: visible;
   width: 100%;
 }

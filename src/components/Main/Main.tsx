@@ -3,6 +3,7 @@ import SideNav from '../SideNav/SideNav';
 import { TabEnum } from '../../enum/TabEnum';
 import HomePage from '../Home/HomePage';
 import ResumePage from '../Resume/ResumePage';
+import ProjectsPage from '../Projects/ProjectsPage';
 
 interface MainPageProps {
   tab : TabEnum;
@@ -25,7 +26,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
                   :
                   curr === TabEnum.DIPLOMA? <ResumePage />
                   :
-                  curr === TabEnum.PROJECTS && <HomePage /> 
+                  curr === TabEnum.PROJECTS && <ProjectsPage /> 
               }
           </div>
           </div>
