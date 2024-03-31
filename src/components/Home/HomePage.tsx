@@ -14,8 +14,6 @@ const HomePage = () => {
             Threw my studies, my projects and my internships, I am looking to develop my skills and knowledge in IT Systems and IT Security. 
           </p>
           <ContactBar />
-          
-  
         </div>
         
 
