@@ -11,7 +11,11 @@ const HomePage = () => {
             <div className='text-2xl font-semibold text-left'>Intern at <a className='link-underlined' href='https://evertrust.io/' target="_blank">EVERTRUST</a>, Paris. IT Risk Compliance and DevOps</div>
           </div>
           <p className=' text-gray-300 text-xl'>
-            Threw my studies, my projects and my internships, I am looking to develop my skills and knowledge in IT Systems and IT Security. 
+            Threw my studies, my projects and my internships, I have been looking to develop my skills and knowledge in IT Systems and IT Security. 
+          </p>
+          <p className=' text-gray-300 text-xl'>
+            Check out my <a className='link-underlined' href='/resume'>resume</a> and my <a className='link-underlined' href='/projects'>projects</a> to know more about me, and let's connect on the social networks
+             below!
           </p>
           <ContactBar />
         </div>
