@@ -19,8 +19,6 @@ const HomePage = () => {
           </p>
           <ContactBar />
         </div>
-        
-
       </div>
     </div>
   );
