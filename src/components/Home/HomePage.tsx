@@ -7,8 +7,8 @@ const HomePage = () => {
         <div className='space-y-8'>
           <h1 className=' text-6xl font-bold text-left'>Hugo MILAIR</h1>
           <div className='space-y-4'>
-            <div className='text-2xl font-semibold text-left'>French student in Computer Science at the <a className='link-underlined' href='https://www.utc.fr/' target="_blank">UTC</a>. Specialized in IT Systems</div>
-            <div className='text-2xl font-semibold text-left'>Intern at <a className='link-underlined' href='https://evertrust.io/' target="_blank">EVERTRUST</a>, Paris. IT Risk Compliance and DevOps</div>
+            <div className='text-2xl font-semibold text-left'>French student in Computer Science at the <a className='link-underlined' href='https://www.utc.fr/' target="_blank" rel="noreferrer">UTC</a>. Specialized in IT Systems</div>
+            <div className='text-2xl font-semibold text-left'>IT Risk Governance and DevOps Intern at <a className='link-underlined' href='https://evertrust.io/' target="_blank" rel="noreferrer">EVERTRUST</a>, Paris.</div>
           </div>
           <p className=' text-gray-300 text-xl'>
             Threw my studies, my projects and my internships, I have been looking to develop my skills and knowledge in IT Systems and IT Security. 
