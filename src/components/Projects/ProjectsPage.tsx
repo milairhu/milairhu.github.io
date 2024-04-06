@@ -23,6 +23,58 @@ const ProjectsPage = () => {
       link: 'https://www.google.com',
       image: f1Image
     },
+    
+    {
+      title: 'Project 2',
+      description: 'This is a project I led at school or on my own',
+      link: 'https://www.google.com',
+      image: f1Image
+    },
+    {
+      title: 'Project 3',
+      description: 'This is a project I led at school or on my own',
+      link: 'https://www.google.com',
+      image: f1Image
+    },
+    
+    {
+      title: 'Project 2',
+      description: 'This is a project I led at school or on my own',
+      link: 'https://www.google.com',
+      image: f1Image
+    },
+    {
+      title: 'Project 3',
+      description: 'This is a project I led at school or on my own',
+      link: 'https://www.google.com',
+      image: f1Image
+    },
+    
+    {
+      title: 'Project 2',
+      description: 'This is a project I led at school or on my own',
+      link: 'https://www.google.com',
+      image: f1Image
+    },
+    {
+      title: 'Project 3',
+      description: 'This is a project I led at school or on my own',
+      link: 'https://www.google.com',
+      image: f1Image
+    },
+    
+    {
+      title: 'Project 2',
+      description: 'This is a project I led at school or on my own',
+      link: 'https://www.google.com',
+      image: f1Image
+    },
+    {
+      title: 'Project 3',
+      description: 'This is a project I led at school or on my own',
+      link: 'https://www.google.com',
+      image: f1Image
+    },
     {
       title: 'Project 4',
       description: 'This is a project I led at school or on my own',
@@ -37,9 +89,11 @@ const ProjectsPage = () => {
           <h2 className='text-2xl font-semibold text-left'>Here is a list of projects I led at school or on my own.</h2>
         </div>
         <div className='w-full bg-slate-300 py-0.5'/> 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 overflow-auto h-3/4'>
+        <div className='flex flex-wrap justify-evenly h-3/4 overflow-auto'>
           {projectsList.map(project => (
+            <div className='flex-auto mb-4 mx-2'>
               <ProjectCard title={project.title} description={project.description} link={project.link} image={project.image} />
+            </div>
           ))}
         </div>
       </div>
