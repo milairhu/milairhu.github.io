@@ -6,24 +6,29 @@ interface ProjectCardProps {
     description: string;
     link : string;
     image: string;
+    technos: string[];
   }
   
 
-const ProjectCard : React.FC<ProjectCardProps> = ({title, description, link, image}) =>{
+const ProjectCard : React.FC<ProjectCardProps> = ({title, description, link, image, technos}) =>{
     return (
-      <div className='h-full bg-slate-50 rounded-xl shadow-lg flex flex-col justify-between pb-4'>
-        <div className='flex flex-col h-3/4'>
-          <div className='flex justify-between h-fit items-center bg-slate-300 px-4 py-2 rounded-t-xl'>
+      <div className='h-full w-full bg-slate-50 rounded-xl shadow-lg flex flex-col justify-between pb-4'>
+        <div className='flex flex-col h-3/4 w-full'>
+          <div className='flex justify-between space-x-4 h-fit w-full items-center bg-slate-300 px-4 py-2 rounded-t-xl'>
             <img src={image} alt='project' className='rounded-full h-12'/>
-            <div className=' text-black font-semibold text-2xl'>
+            <div className='flex text-end  text-black font-semibold text-2xl truncate'>
               {title}
             </div>
           </div>
-            <div className='h-full text-black font-normal text-lg px-4 py-2'>
+            <div className='h-full text-black font-normal text-xl px-4 py-2'>
               <p>{description}</p>
             </div>
         </div>
-        <div className='flex items-center justify-end px-4'>
+        <div className='flex items-center justify-between px-4'>
+          <div className='flex items-center w-full text-black truncate text-xl'>
+            <div className='w-3 h-3 mr-2 bg-lime-500 rounded-full' />
+            <span>{technos.join(', ')}</span>
+          </div>
           <a href={link} target="_blank" rel="noreferrer">
             <FaGithub size={38} color='black' />
           </a>
