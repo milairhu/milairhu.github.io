@@ -81,7 +81,7 @@ const ProjectsPage = () => {
         <div className='w-full bg-slate-300 py-0.5'/> 
         <div className='flex flex-wrap justify-center items-start h-3/4 w-full overflow-auto'>
           {projectsList.map(project => (
-            <div className='flex justify-center w-10/12 lg:w-1/2 h-1/2 mb-4'>
+            <div className='flex justify-center w-10/12 lg:w-1/2 lg:h-2/3 xl:h-3/5 2xl:h-1/2 mb-4'>
               <div className='w-5/6 h-full'>
                 <ProjectCard title={project.title} description={project.description} link={project.link} image={project.image} technos={project.technos} />
               </div> 
