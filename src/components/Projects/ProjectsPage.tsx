@@ -89,9 +89,9 @@ const ProjectsPage = () => {
           <h2 className='text-2xl font-semibold text-left'>Here is a list of projects I led at school or on my own.</h2>
         </div>
         <div className='w-full bg-slate-300 py-0.5'/> 
-        <div className='flex flex-wrap justify-evenly h-3/4 overflow-auto'>
+        <div className='flex flex-wrap justify-center items-start h-3/4 w-full overflow-auto'>
           {projectsList.map(project => (
-            <div className='flex-auto mb-4 mx-2'>
+            <div className='flex justify-center w-full lg:w-1/2 h-1/2 mb-4'>
               <ProjectCard title={project.title} description={project.description} link={project.link} image={project.image} />
             </div>
           ))}
