@@ -20,7 +20,7 @@ const ProjectCard : React.FC<ProjectCardProps> = ({title, description, link, ima
               {title}
             </div>
           </div>
-            <div className='h-full text-black font-normal text-xl px-4 py-2'>
+            <div className='h-full text-black font-normal text-xl px-4 py-2 italic'>
               <p>{description}</p>
             </div>
         </div>
