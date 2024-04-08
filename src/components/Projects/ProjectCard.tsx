@@ -25,8 +25,8 @@ const ProjectCard : React.FC<ProjectCardProps> = ({title, description, link, ima
             </div>
         </div>
         <div className='flex items-center justify-between px-4'>
-          <div className='flex items-center w-full text-black truncate text-xl'>
-            <div className='w-3 h-3 mr-2 bg-lime-500 rounded-full' />
+          <div className='flex items-center w-10/12 text-black justify-start truncate text-xl'>
+            <div className='w-3 h-3 mr-2 bg-lime-500 rounded-full min-w-3' />
             <span>{technos.join(', ')}</span>
           </div>
           <a href={link} target="_blank" rel="noreferrer">
