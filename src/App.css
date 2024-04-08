@@ -61,3 +61,51 @@
   visibility: visible;
   width: 100%;
 }
+
+.link-underlined-french {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+
+.link-underlined-french::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to right, blue, white, red);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-underlined-french:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+.link-underlined-uk {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+
+.link-underlined-uk::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to right, red, white, blue);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-underlined-uk:hover::after {
+  visibility: visible;
+  width: 100%;
+}
