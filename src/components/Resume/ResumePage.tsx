@@ -8,7 +8,7 @@ const ResumePage = () => {
           <h2 className='text-2xl font-semibold text-left'>See my resume as a PDF in a <a className='link-underlined-french' href="/fr_resume_MILAIR_Hugo.pdf" target="_blank" rel="noopener noreferrer">French version</a> or in an <a className='link-underlined-uk' href="/en_resume_MILAIR_Hugo.pdf" target="_blank" rel="noopener noreferrer">English version</a>.</h2>
         </div>
         <div className='w-full bg-slate-300 py-0.5'/>
-        <div className=' h-3/4 w-full space-y-10 overflow-auto'>
+        <div className='h-4/6 md:h-3/4 w-full space-y-10 overflow-auto'>
           <div className='flex space-x-5'>
             <div className='text-lg md:text-2xl lg:text-4xl font-semibold w-1/3 xl:w-1/4 text-wrap'>Professionnal experience</div>
             <div className='w-3/4 space-y-4'>

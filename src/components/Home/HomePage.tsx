@@ -2,7 +2,7 @@ import React from 'react';
 import ContactBar from '../ContactBar/ContactBar';
 const HomePage = () => {
   return (
-    <div className='h-full w-full text-white'>
+    <div className='h-full w-full text-white overflow-auto'>
       <div className='w-full items-center'>
         <div className='space-y-8'>
           <h1 className=' text-6xl font-bold text-left'>Hugo MILAIR</h1>

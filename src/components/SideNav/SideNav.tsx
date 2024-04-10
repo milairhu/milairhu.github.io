@@ -15,14 +15,14 @@ const SideNav: React.FC<SideNavProps> = ({ currTab, tabSetter }) => {
 
 
   return (
-      <div className=" bg-slate-300 rounded-full h-2/6 px-3 flex flex-col justify-evenly">
-        <div className={`${currTab === TabEnum.HOME && 'bg-white'} rounded-full p-3`}>
+      <div className=" bg-slate-300 rounded-full h-1/2 px-2  flex flex-col justify-evenly items-center">
+        <div className={`${currTab === TabEnum.HOME && 'bg-white'} rounded-full w-fit p-2 `}>
           <Link to ="/"><HomeSVG className="w-10 h-10 cursor-pointer" onClick={()=> tabSetter(TabEnum.HOME)}/></Link>
         </div>
-        <div className={`${currTab === TabEnum.DIPLOMA && 'bg-white'} rounded-full p-3`}>
+        <div className={`${currTab === TabEnum.DIPLOMA && 'bg-white'} rounded-full  w-fit p-2`}>
           <Link to ="/resume"><DiplomaSVG className="w-10 h-10 cursor-pointer" onClick={()=> tabSetter(TabEnum.DIPLOMA)} /></Link>
         </div>
-        <div className={`${currTab === TabEnum.PROJECTS && 'bg-white'} rounded-full p-3`}>
+        <div className={`${currTab === TabEnum.PROJECTS && 'bg-white'} rounded-full  w-fit p-2`}>
           <Link to ="/projects"><ProjectsSVG className="w-10 h-10 cursor-pointer" onClick={()=> tabSetter(TabEnum.PROJECTS)} /></Link>  
         </div>
     </div>
