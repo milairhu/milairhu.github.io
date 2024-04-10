@@ -73,8 +73,8 @@ const ProjectsPage = () => {
   ]
 
     return (
-      <div className='h-full w-full text-white space-y-11'>
-        <div className='w-full space-y-8'>
+      <div className='h-full w-full text-white space-y-7'>
+        <div className='w-full space-y-5'>
           <h1 className=' text-6xl font-bold text-left'>Projects</h1>
           <h2 className='text-2xl font-semibold text-left'>Here is a list of projects I led at school or on my own.</h2>
         </div>
