@@ -15,7 +15,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
 
     return(
         <div className="flex h-full w-full bg-slate-800 items-center ">
-          <div className='h-full ml-8 flex items-center space-x-10'>
+          <div className='h-full ml-6 md:ml-8 flex items-center space-x-6 md:space-x-10'>
             <SideNav currTab={curr} tabSetter={setCurr} />
             <div className='h-4/6 border-r border-white'/>
           </div>
