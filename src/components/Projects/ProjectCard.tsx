@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
 interface ProjectCardProps {
@@ -11,6 +11,20 @@ interface ProjectCardProps {
   
 
 const ProjectCard : React.FC<ProjectCardProps> = ({title, description, link, image, technos}) =>{
+
+  const [iconSize, setIconSize] = useState(window.innerWidth <= 600 ? 20 : window.innerWidth  <= 800 ? 28: 38);
+
+  useEffect(() => {
+      const handleResize = () => {
+          setIconSize(window.innerWidth <= 600 ? 20 : window.innerWidth  <= 800 ? 28: 38);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+          window.removeEventListener('resize', handleResize);
+      };
+  }, []);
     return (
       <div className='h-full w-full bg-slate-50 rounded-xl shadow-lg flex flex-col justify-between pb-4'>
         <div className='flex flex-col h-3/4 w-full'>
@@ -30,7 +44,7 @@ const ProjectCard : React.FC<ProjectCardProps> = ({title, description, link, ima
             <span>{technos.join(', ')}</span>
           </div>
           <a href={link} target="_blank" rel="noreferrer">
-            <FaGithub size={38} color='black' />
+            <FaGithub size={iconSize} color='black' />
           </a>
         </div>
     </div>

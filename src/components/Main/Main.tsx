@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SideNav from '../SideNav/SideNav';
 import { TabEnum } from '../../enum/TabEnum';
 import HomePage from '../Home/HomePage';
@@ -11,12 +11,27 @@ interface MainPageProps {
 
 const MainPage: React.FC<MainPageProps> = ({tab}) => {
     const [curr, setCurr] = useState<TabEnum>(tab);
+
+    const [isVertical, setIsVertical] = useState<boolean>(window.innerWidth >=600);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsVertical(window.innerWidth >=400);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     
 
     return(
+      isVertical?
         <div className="flex h-full w-full bg-slate-800 items-center ">
           <div className='h-full ml-6 md:ml-8 flex items-center space-x-6 md:space-x-10'>
-            <SideNav currTab={curr} tabSetter={setCurr} />
+            <SideNav isVertical={isVertical} currTab={curr} tabSetter={setCurr} />
             <div className='h-4/6 border-r border-white'/>
           </div>
           <div className='flex w-full h-full justify-center items-center'>
@@ -30,7 +45,23 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
               }
           </div>
           </div>
-          
+        </div>
+        :
+        <div className="flex h-full w-full bg-slate-800 items-center justify-between flex-col pt-2">
+          <div className='flex w-full h-5/6 justify-center items-center'>
+            <div className=" h-full w-11/12">
+              {
+                  curr === TabEnum.HOME ? <HomePage />
+                  :
+                  curr === TabEnum.DIPLOMA? <ResumePage />
+                  :
+                  curr === TabEnum.PROJECTS && <ProjectsPage /> 
+              }
+            </div>
+          </div>
+          <div className='flex w-full items-center justify-center'>
+            <SideNav isVertical={isVertical} currTab={curr} tabSetter={setCurr} />
+          </div>
         </div>
         
     )
