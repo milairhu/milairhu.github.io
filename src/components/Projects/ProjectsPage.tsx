@@ -21,10 +21,10 @@ const ProjectsPage = () => {
     },
     {
       title: 'F1 Championship Simulation',
-      description: 'Multi-agent system simulating formula 1 races (based on real circuits) and championship to determine the best profile of a driver for winning titles. Using a Rest API and a web user interface to simulate step by step the championships.',
+      description: 'Multi-agent system simulating formula 1 races (based on real circuits) and championship to determine the best profile of a driver for winning titles.',
       link: 'https://github.com/milairhu/Formula1-championship-sim',
       image: f1Image,
-      technos: ['Go', 'React', 'TailwindCSS']
+      technos: ['Go', 'Rest API', 'React', 'TailwindCSS']
     },
     {
       title: 'WebSocketChat',

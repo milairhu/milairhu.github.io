@@ -16,7 +16,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsVertical(window.innerWidth >=400);
+            setIsVertical(window.innerWidth >=800);
         };
 
         window.addEventListener('resize', handleResize);
