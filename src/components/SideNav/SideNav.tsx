@@ -30,7 +30,7 @@ const SideNav: React.FC<SideNavProps> = ({ currTab, tabSetter, isVertical }) => 
         </div>
     </div>
     :
-    <div className="w-8/12 bg-slate-300 rounded-full h-1/6 py-6 flex justify-evenly items-center">
+    <div className="w-10/12 bg-slate-300 rounded-b-full h-1/6 py-6 flex justify-evenly items-center">
       <div className={`${currTab === TabEnum.HOME && 'bg-white'} rounded-full w-fit p-2 `}>
         <Link to ="/"><HomeSVG className=" w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" onClick={()=> tabSetter(TabEnum.HOME)}/></Link>
       </div>

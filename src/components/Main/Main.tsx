@@ -47,7 +47,10 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
           </div>
         </div>
         :
-        <div className="flex h-full w-full bg-slate-800 items-center justify-between flex-col pt-2">
+        <div className={`flex flex-col h-full w-full bg-slate-800 items-center justify-start  ${isVertical && 'pt-2' }`} >
+        <div className='flex w-full items-start justify-center'>
+            <SideNav isVertical={isVertical} currTab={curr} tabSetter={setCurr} />
+          </div>
           <div className='flex w-full h-5/6 justify-center items-center'>
             <div className=" h-full w-11/12">
               {
@@ -58,9 +61,6 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
                   curr === TabEnum.PROJECTS && <ProjectsPage /> 
               }
             </div>
-          </div>
-          <div className='flex w-full items-center justify-center'>
-            <SideNav isVertical={isVertical} currTab={curr} tabSetter={setCurr} />
           </div>
         </div>
         
