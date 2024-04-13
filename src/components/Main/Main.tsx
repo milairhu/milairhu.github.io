@@ -37,7 +37,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
           <div className='flex w-full h-full justify-center items-center'>
             <div className=" h-5/6 w-11/12">
               {
-                  curr === TabEnum.HOME ? <HomePage />
+                  curr === TabEnum.HOME ? <HomePage setCurr={setCurr} />
                   :
                   curr === TabEnum.DIPLOMA? <ResumePage />
                   :
@@ -54,7 +54,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
           <div className='flex w-full h-5/6 justify-center items-center'>
             <div className=" h-full w-11/12">
               {
-                  curr === TabEnum.HOME ? <HomePage />
+                  curr === TabEnum.HOME ? <HomePage setCurr={setCurr} />
                   :
                   curr === TabEnum.DIPLOMA? <ResumePage />
                   :

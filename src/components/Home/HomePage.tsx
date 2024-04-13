@@ -1,6 +1,13 @@
 import React from 'react';
 import ContactBar from '../ContactBar/ContactBar';
-const HomePage = () => {
+import { Link } from 'react-router-dom';
+import { TabEnum } from '../../enum/TabEnum';
+
+interface HomeProps {
+  setCurr: (tab: TabEnum) => void;
+}
+
+const HomePage: React.FC<HomeProps> = ({ setCurr }) => {  
   return (
     <div className='h-full w-full text-white overflow-auto'>
       <div className='w-full items-center'>
@@ -14,7 +21,7 @@ const HomePage = () => {
             Threw my studies, my projects and my internships, I have been looking to develop my skills and knowledge in IT Systems and IT Security. 
           </p>
           <p className=' text-gray-300 text-lg md:text-xl'>
-            Check out my <a className='link-underlined' href='/resume'>resume</a> and my <a className='link-underlined' href='/projects'>projects</a> to know more about me, and let's connect on the social networks
+            Check out my <Link className='link-underlined' to='/resume' onClick ={()=>setCurr(TabEnum.DIPLOMA)}>resume</Link> and my <Link className='link-underlined' to='/projects' onClick ={()=>setCurr(TabEnum.PROJECTS)}>projects</Link> to know more about me, and let's connect on the social networks
              below!
           </p>
           <ContactBar />
