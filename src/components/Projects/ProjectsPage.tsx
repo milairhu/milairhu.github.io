@@ -69,6 +69,13 @@ const ProjectsPage = () => {
       link: 'https://github.com/milairhu/football-se',
       image: sportImage,
       technos: ['Lisp']
+    },
+    {
+      title: 'milairhu.github.io',
+      description: 'My portfolio, a React application using TailwindCSS for styling. It is hosted on GitHub Pages.',
+      link: 'https://github.com/milairhu/milairhu.github.io',
+      image: brainImage,
+      technos: ['React', 'TailwindCSS']
     }
   ]
 
