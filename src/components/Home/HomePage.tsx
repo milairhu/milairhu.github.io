@@ -12,7 +12,11 @@ const HomePage: React.FC<HomeProps> = ({ setCurr }) => {
     <div className='h-full w-full text-white overflow-auto'>
       <div className='w-full items-center'>
         <div className='space-y-8'>
-          <h1 className='text-3xl md:text-6xl font-bold text-left'>Hugo MILAIR</h1>
+          <div className='flex space-x-5 items-center justify-between w-10/12'>
+            <h1 className='text-3xl md:text-6xl font-bold text-left'>Hugo MILAIR</h1>
+            <img className='rounded-full w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48' src='/profile_picture.jpg' alt="Hugo Milair picture" />
+          </div>
+          
           <div className='space-y-4'>
             <div className='text-xl md:text-2xl font-semibold text-left'>French student in Computer Science at the <a className='link-underlined' href='https://www.utc.fr/' target="_blank" rel="noreferrer">UTC</a>. Specialized in IT Systems</div>
             <div className='text-xl md:text-2xl font-semibold text-left'>IT Risk Governance and DevOps Intern at <a className='link-underlined' href='https://evertrust.io/' target="_blank" rel="noreferrer">EVERTRUST</a>, Paris.</div>
