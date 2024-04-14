@@ -17,7 +17,7 @@ const ResumeElement: React.FC<ResumeElementProps> = ({ title, date, content }) =
             <div className='text-sm md:text-base text-wrap text-gray-200 space-y-0.5'>
                 {
                     content?.map((paragraph, index) => (
-                        <div key={index}>- {paragraph}</div>
+                        <div key={index}>· {paragraph}</div>
                     ))
                 }
             </div>
