@@ -16,7 +16,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsVertical(window.innerWidth >=800);
+            setIsVertical(window.innerWidth >=750);
         };
         console.log("Walex wonderful portfolio : https://walex999.github.io/Website")
 
