@@ -1,22 +1,33 @@
-name: Build and Deploy
+name: CI/CD
+
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [9.5.1]
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Use Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          node-version: '14'
+          node-version: ${{ matrix.node-version }}
 
-      - name: Install Dependencies
-        run: npm i && npm ci
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
 
       - name: Deploy
         run: npm run deploy
