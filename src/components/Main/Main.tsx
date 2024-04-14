@@ -18,6 +18,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
         const handleResize = () => {
             setIsVertical(window.innerWidth >=800);
         };
+        console.log("Walex wonderful portfolio : https://walex999.github.io/Website")
 
         window.addEventListener('resize', handleResize);
 
