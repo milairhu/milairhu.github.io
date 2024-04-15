@@ -1,12 +1,14 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import f1Image from './Pictures/f1.jpg'
+import f1Image from './Pictures/f1.png'
 import quantumImage from './Pictures/quantum.png'
 import chatImage from './Pictures/chat.png'
 import keyImage from './Pictures/key.png'
 import brainImage from './Pictures/brain.png'
-import sportImage from './Pictures/sport.png'
-import labyImage from './Pictures/laby.png'
+import internetImage from './Pictures/internet.png'
+import sudokuImage from './Pictures/sudoku.png'
+import footballImage from './Pictures/football.png'
+import trophyImage from './Pictures/trophy.png'
 
 const ProjectsPage = () => {
 
@@ -45,7 +47,7 @@ const ProjectsPage = () => {
       title: 'SAToku',
       description: 'Modelising a sudoku problem into a SAT problem. A Sudoku solver using the SAT solver Gophersat. An interface is used for the user to input the Sudoku grid and to vizualise clearly the solution.',
       link: 'https://github.com/milairhu/SAToku',
-      image: brainImage,
+      image: sudokuImage,
       technos: ['Python', 'SAT', 'Tkinter']
 
     },
@@ -53,28 +55,28 @@ const ProjectsPage = () => {
       title: 'Sport Results Nortifier',
       description: 'A script that uses an API to check periodically the results of a selected sport game sends audio notification for major events.',
       link: 'https://github.com/milairhu/sport-result-notifier',
-      image: sportImage,
+      image: trophyImage,
       technos: ['Python', 'API']
     },
     {
       title: 'Helltaker Solver',
       description: 'Several Solvers for the game Helltaker. Functionnal solvers use A* algorithm or ASP representation.',
       link: 'https://github.com/milairhu/helltaker_solver',
-      image: labyImage,
+      image: brainImage,
       technos: ['Python', 'ASP']
     },
     {
       title: 'Football Expert System',
       description: 'An expert system that gives tactical advice to a football coach based on the current game state.',
       link: 'https://github.com/milairhu/football-se',
-      image: sportImage,
+      image: footballImage,
       technos: ['Lisp']
     },
     {
       title: 'milairhu.github.io',
       description: 'My portfolio, a React application using TailwindCSS for styling. It is hosted on GitHub Pages.',
       link: 'https://github.com/milairhu/milairhu.github.io',
-      image: brainImage,
+      image: internetImage,
       technos: ['React', 'TailwindCSS']
     }
   ]
