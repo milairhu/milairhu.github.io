@@ -81,6 +81,7 @@ const ProjectsPage = () => {
     }
   ]
 
+  
     return (
       <div className='h-full w-full text-white space-y-7'>
         <div className='w-full space-y-5'>
