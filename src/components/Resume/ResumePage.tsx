@@ -21,9 +21,9 @@ const ResumePage = () => {
       ]
     },
     {
-      title: 'Crew member, McDonald’s Restaurant of Semécourt, FRANCE',
+      title: 'Crew member, McDonald’s Restaurant, Semécourt, FRANCE',
       date: 'Summer 2022',
-      content: ['Welcomed customers','Prepared orders','Worked within a team']
+      content: ['Welcomed customers.','Prepared orders.','Worked within a team.']
     }
   ];
 
@@ -43,25 +43,25 @@ const ResumePage = () => {
       title: 'Junior UTC, Member of the Quality Pole of my university‘s Junior-Enterprise',
       date: '09/2023 - 03-2024',
       content: [
-        'Corrected and validated official documents and contracts emitted by Junior UTC',
-        'Audited internal pieces of work',
-        'Participated in bi-weekly internal meetings'
+        'Corrected and validated official documents and contracts emitted by Junior UTC.',
+        'Audited internal pieces of work.',
+        'Participated in bi-weekly internal meetings.'
       ]
     },
     {
       title: 'Candide, General Secretary of a Tutoring Association',
       date: '09/2021 - 03/2022',
       content: [
-        'Headed contacts with potential and current partnerships',
-        'Led and reported on internal meetings',
-        'Tutored after-school class'
+        'Headed contacts with potential and current partnerships.',
+        'Led and reported on internal meetings.',
+        'Tutored after-school class.'
       ]
     },
     {
       title: 'Tennis',
       date: 'Since 2013',
       content: [
-        'Participate to bi-weekly trainings',
+        'Participate to bi-weekly trainings.',
         'Play at competitive levels.']
 
     }
