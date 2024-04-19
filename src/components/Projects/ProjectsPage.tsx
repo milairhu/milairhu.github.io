@@ -52,7 +52,7 @@ const ProjectsPage = () => {
 
     },
     {
-      title: 'Sport Results Nortifier',
+      title: 'Sport Results Notifier',
       description: 'A script that uses an API to check periodically the results of a selected sport game sends audio notification for major events.',
       link: 'https://github.com/milairhu/sport-result-notifier',
       image: trophyImage,
