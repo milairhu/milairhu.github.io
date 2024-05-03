@@ -9,14 +9,14 @@ const ResumePage = () => {
       date: '02/2024 – 08/2024',
       content: [
         'Established and matured security policies for the company to comply with ISO 27001.',
-        'Participated to the infrastrusture improvement and to the automation of processes.'
+        'Participated to the infrastructure improvement and to the automation of processes.'
       ]
     },
     {
       title: 'Software Developer, Internship at InTech SA, Kayl, LUXEMBURG',
       date: '09/2022 – 02/2023',
       content: [
-        'Developed with a team both backend and frontend of a web app for internal usage.',
+        'Developed with a team both backend and frontend of an invoice management web app.',
         'Adapted to AGILE framework.'
       ]
     },
@@ -62,8 +62,8 @@ const ResumePage = () => {
       date: 'Since 2013',
       content: [
         'Participate to bi-weekly trainings.',
-        'Play at competitive levels.']
-
+        'Play at competitive levels.'
+      ]
     }
   ];
 
