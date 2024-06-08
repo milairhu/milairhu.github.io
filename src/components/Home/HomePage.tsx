@@ -18,7 +18,7 @@ const HomePage: React.FC<HomeProps> = ({ setCurr }) => {
           </div>
           
           <div className='space-y-4'>
-            <div className='text-xl md:text-2xl font-semibold text-left'>French student in Computer Science at the <a className='link-underlined' href='https://www.utc.fr/' target="_blank" rel="noreferrer">UTC</a>. Specialized in IT Systems</div>
+            <div className='text-xl md:text-2xl font-semibold text-left'>French student in Computer Science at the <a className='link-underlined' href='https://www.utc.fr/' target="_blank" rel="noreferrer">UTC</a>. Specialized in IT Systems.</div>
             <div className='text-xl md:text-2xl font-semibold text-left'>IT Risk Governance and DevOps Intern at <a className='link-underlined' href='https://evertrust.io/' target="_blank" rel="noreferrer">EVERTRUST</a>, Paris.</div>
           </div>
           <p className=' text-gray-300 text-lg md:text-xl'>

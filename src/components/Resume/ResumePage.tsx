@@ -77,7 +77,7 @@ const ResumePage = () => {
         <div className='w-full bg-slate-300 pt-0.5'/>
         <div className='h-3/4 w-full space-y-8 md:space-y-10 overflow-auto'>
           <div className='md:flex space-x-5 space-y-3 md:space-y-0'>
-            <div className='text-lg md:text-2xl font-semibold md:w-1/3 lg:w-1/4 text-wrap'>Professionnal experience</div>
+            <div className='text-lg md:text-2xl font-semibold md:w-1/3 lg:w-1/4 text-wrap'>Professionnal experiences</div>
             <div className='w-3/4 space-y-4'>
               {
                 professionnalExperiences.map((experience, index) => (
@@ -100,7 +100,7 @@ const ResumePage = () => {
           <div className='text-lg md:text-2xl font-semibold md:w-1/3 lg:w-1/4 text-wrap'>Computer skills</div>
             <div className='w-3/4 space-y-4'>
               <div>
-                Computing languages: C, C++, Go, Python3, HTML, CSS, JavaScript, Java, Dart, React, Flutter, SQL, VB, Lisp, Prolog
+                Computing languages: C, C++, Go, Python, HTML, CSS, JavaScript (React), Java (Spring Boot), Dart (Flutter), PHP (Laravel, Filament) SQL, VB, Lisp, Prolog
               </div>
               <div>
                General knowledge: · Computer Security
@@ -110,6 +110,7 @@ const ResumePage = () => {
 · Relational and Non-Relational
 Databases
 · Logic Programming
+· Quantum Computing
               </div>
             </div>
           </div>
