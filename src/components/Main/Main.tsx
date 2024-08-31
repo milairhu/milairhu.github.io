@@ -18,7 +18,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
         const handleResize = () => {
             setIsVertical(window.innerWidth >=750);
         };
-        console.log("Walex wonderful portfolio : https://walex999.github.io/Website")
+        console.log("Walex wonderful portfolio : https://walex.fr/")
 
         window.addEventListener('resize', handleResize);
 
@@ -30,7 +30,7 @@ const MainPage: React.FC<MainPageProps> = ({tab}) => {
 
     return(
       isVertical?
-        <div className="flex h-full w-full bg-slate-800 items-center ">
+        <div className="flex h-full w-full bg-slate-800 items-center font-serif">
           <div className='h-full ml-6 md:ml-8 flex items-center space-x-6 md:space-x-10'>
             <SideNav isVertical={isVertical} currTab={curr} tabSetter={setCurr} />
             <div className='h-4/6 border-r border-white'/>
