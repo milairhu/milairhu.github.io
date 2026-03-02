@@ -1,111 +1,119 @@
-
-.App {
-  text-align: center;
+.link-underlined,
+.link-underlined-french,
+.link-underlined-uk {
+    color: var(--color-text);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.link-underlined {
-  color: white;
-  text-decoration: none;
-  position: relative;
+.link-underlined::after,
+.link-underlined-french::after,
+.link-underlined-uk::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .link-underlined::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.link-underlined:hover::after {
-  visibility: visible;
-  width: 100%;
-}
-
-.link-underlined-french {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  border-bottom: 2px solid white;
+    background-image: linear-gradient(
+        90deg,
+        var(--color-accent),
+        var(--color-accent-2)
+    );
 }
 
 .link-underlined-french::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(to right, blue, white, red);
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.link-underlined-french:hover::after {
-  visibility: visible;
-  width: 100%;
-}
-
-.link-underlined-uk {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  border-bottom: 2px solid white;
+    background-image: linear-gradient(90deg, #0055a4, #ffffff 50%, #ef4135);
 }
 
 .link-underlined-uk::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(to right, red, white, blue);
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(90deg, #cf142b, #ffffff 50%, #00247d);
 }
 
+.link-underlined:hover,
+.link-underlined-french:hover,
+.link-underlined-uk:hover {
+    color: var(--color-accent);
+}
+
+.link-underlined:hover::after,
+.link-underlined-french:hover::after,
 .link-underlined-uk:hover::after {
-  visibility: visible;
-  width: 100%;
+    transform: scaleX(1);
+}
+
+.glass-panel {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 32px;
+    box-shadow: 0 25px 70px rgba(2, 6, 23, 0.65);
+    backdrop-filter: blur(18px);
+}
+
+.glass-panel--muted {
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.tag-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: rgba(15, 23, 42, 0.45);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-muted);
+    letter-spacing: 0.02em;
+}
+
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(226, 232, 240, 0.3),
+        transparent
+    );
+}
+
+.text-gradient {
+    background: linear-gradient(
+        120deg,
+        var(--color-accent),
+        var(--color-accent-2)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.floating-ring {
+    position: absolute;
+    border-radius: 999px;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    opacity: 0.4;
+    animation: float 18s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(20px, -25px, 0) scale(1.05);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
 }
