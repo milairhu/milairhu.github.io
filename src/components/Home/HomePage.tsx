@@ -40,59 +40,40 @@ const HomePage: React.FC<HomeProps> = ({ setCurr }) => {
               >
                 EVERTRUST
               </a>{" "}
-              in Paris, I blend automation, resilience and security to build
-              dependable services.
+              in Paris, I lead ISO 27001 compliance operation and take part
+              tackling the platform and infrastructure engineering challenges.
             </p>
-            <p>
-              Through my studies, projects and internships, I have been
-              intentionally crafting a versatile engineering toolbox — from
-              distributed systems to quantum computing side quests.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              to="/resume"
-              onClick={() => setCurr(TabEnum.DIPLOMA)}
-              className="group inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-400 to-violet-500 px-6 py-3 font-semibold text-slate-900 transition hover:shadow-lg hover:shadow-sky-500/30"
-            >
-              View resume
-            </Link>
-            <Link
-              to="/projects"
-              onClick={() => setCurr(TabEnum.PROJECTS)}
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-white hover:bg-white/10"
-            >
-              Explore projects
-            </Link>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">
-                Experience
+                Compliance
               </p>
-              <p className="text-3xl font-semibold mt-1">3+ years</p>
+              <p className="text-xl font-semibold mt-1">
+                ISO 27001 Lead Implementor
+              </p>
               <p className="text-sm text-white/60 mt-1">
-                Professional & academic industry projects
+                Risk Governance, Risk Analysis, Remediation Plans
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">
-                Focus
+                SRE
               </p>
-              <p className="text-xl font-semibold mt-1">
-                IT Risk • DevOps • Security
-              </p>
+              <p className="text-xl font-semibold mt-1">Platform engineering</p>
               <p className="text-sm text-white/60 mt-1">
-                Automation, observability & governance
+                Automation, cloud and observability
               </p>
             </div>
           </div>
           <div className="space-y-3">
-            <p className="text-white/70 text-lg">Let's connect</p>
+            <p className="text-lg font-semibold tracking-wide text-white/90">
+              Let's connect
+            </p>
             <ContactBar />
           </div>
         </div>
-        <div className="flex w-full lg:w-2/5 items-center justify-center">
+        <div className="flex w-full lg:w-2/5 items-start justify-center">
           <div className="relative w-full max-w-sm">
             <div className="absolute inset-0 rounded-[36px] bg-gradient-to-br from-sky-500/30 to-violet-500/30 blur-3xl" />
             <div className="relative rounded-[36px] border border-white/10 bg-white/5 p-6 backdrop-blur-2xl shadow-2xl flex flex-col items-center space-y-5">
@@ -102,11 +83,13 @@ const HomePage: React.FC<HomeProps> = ({ setCurr }) => {
                 alt="Hugo Milair"
               />
               <div className="text-center space-y-1">
-                <p className="text-lg font-semibold">Systems Engineer</p>
+                <p className="text-lg font-semibold">
+                  Compliance & SRE engineer
+                </p>
                 <p className="text-sm text-white/60">UTC • EVERTRUST</p>
               </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                {["DevOps", "Security", "Cloud"].map((skill) => (
+              <div className="flex flex-wrap justify-start gap-2">
+                {["IT Risk Governance", "DevOps", "Cloud"].map((skill) => (
                   <span
                     key={skill}
                     className="tag-pill text-white/90 border-white/20 bg-white/10"
