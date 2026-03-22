@@ -1,6 +1,5 @@
 import React from "react";
 import ContactBar from "../ContactBar/ContactBar";
-import { Link } from "react-router-dom";
 import { TabEnum } from "../../enum/TabEnum";
 
 interface HomeProps {

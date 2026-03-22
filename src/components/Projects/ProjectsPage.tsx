@@ -99,8 +99,8 @@ const ProjectsPage = () => {
   ];
 
   return (
-    <div className="h-full w-full text-white space-y-8">
-      <div className="space-y-3">
+    <div className="flex h-full w-full min-h-0 flex-col gap-8 overflow-hidden text-white">
+      <div className="shrink-0 space-y-3">
         <div className="flex flex-col gap-3">
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
             Projects that blend rigor and curiosity
@@ -112,8 +112,8 @@ const ProjectsPage = () => {
           </p>
         </div>
       </div>
-      <div className="divider-line" />
-      <div className="grid h-[70vh] grid-cols-1 gap-6 overflow-auto pb-4 md:grid-cols-2">
+      <div className="divider-line shrink-0" />
+      <div className="grid min-h-0 flex-1 grid-cols-1 gap-6 overflow-y-auto pb-4 pr-1 md:grid-cols-2">
         {projectsList.map((project) => (
           <ProjectCard
             key={project.title}

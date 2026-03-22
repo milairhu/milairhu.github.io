@@ -32,10 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <Icon size={30} />
             </div>
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-white/50">
-              Case study
-            </p>
+          <div className="min-w-0">
             <h3 className="text-2xl font-semibold">{title}</h3>
           </div>
         </div>

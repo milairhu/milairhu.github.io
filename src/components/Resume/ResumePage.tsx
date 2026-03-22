@@ -35,7 +35,7 @@ const ResumePage = () => {
     {
       title:
         "Master’s Degree in Computer Engineering, Université de Technologie de Compiègne, Compiègne, FRANCE",
-      date: "02/2020 - Expected in 06/2024",
+      date: "02/2020 - 06/2024",
     },
     {
       title:
@@ -74,69 +74,70 @@ const ResumePage = () => {
     },
   ];
 
-  const generalKnowledge = [
-    "Computer Security",
-    "Distributed Systems & Algorithms",
-    "IT Networks",
-    "Operations Research",
-    "Relational & Non-Relational Databases",
-    "Logic Programming",
-  ];
-
   return (
-    <div className="h-full w-full text-white space-y-8">
-      <div className="space-y-4">
-        <div className="space-y-3">
-          <h1 className="text-4xl md:text-5xl font-semibold">
-            Experience, education & community work
-          </h1>
-          <p className="text-lg text-white/70 max-w-3xl">
-            Download the concise PDF versions in{" "}
-            <a
-              className="link-underlined-french"
-              href="/fr_resume_MILAIR_Hugo.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              French
-            </a>{" "}
-            or{" "}
-            <a
-              className="link-underlined-uk"
-              href="/en_resume_MILAIR_Hugo.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              English
-            </a>
-            , and skim the highlights below.
-          </p>
-        </div>
-      </div>
-      <div className="divider-line" />
-      <div className="flex h-[70vh] flex-col gap-6 overflow-auto pr-2">
-        <section className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 className="text-2xl font-semibold">Professional experience</h2>
-            <span className="tag-pill text-xs text-white/80 border-white/20 bg-white/10">
-              Security · DevOps
-            </span>
+    <div className="h-full w-full text-white">
+      <div className="flex h-full flex-col gap-8 pb-2">
+        <header className="shrink-0">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="space-y-3">
+              <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+                Experience, education & community work
+              </h1>
+              <p className="max-w-3xl text-lg text-white/70">
+                Download a complete PDF version, then skim the key highlights
+                directly below.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <a
+                className="inline-flex items-center rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white/90 transition hover:border-white/60 hover:bg-white/10"
+                href="/fr_resume_MILAIR_Hugo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CV PDF · FR
+              </a>
+              <a
+                className="inline-flex items-center rounded-full border border-sky-300/60 bg-sky-400/15 px-4 py-2 text-sm font-semibold text-sky-100 transition hover:border-sky-200 hover:bg-sky-400/25"
+                href="/en_resume_MILAIR_Hugo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume PDF · EN
+              </a>
+            </div>
           </div>
-          <div className="mt-6 space-y-6">
-            {professionnalExperiences.map((experience, index) => (
-              <ResumeElement
-                key={index}
-                title={experience.title}
-                date={experience.date}
-                content={experience.content}
-              />
-            ))}
-          </div>
-        </section>
-        <section className="grid gap-6 md:grid-cols-2">
-          <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
-            <h2 className="text-2xl font-semibold mb-4">Education</h2>
-            <div className="space-y-6">
+        </header>
+
+        <div className="divider-line shrink-0" />
+
+        <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.72fr)]">
+          <section className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-2xl">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h2 className="text-xl md:text-2xl font-semibold">
+                Professional experience
+              </h2>
+              <span className="tag-pill text-xs text-white/80 border-white/20 bg-white/10">
+                Security · DevOps
+              </span>
+            </div>
+            <div className="mt-5 space-y-4">
+              {professionnalExperiences.map((experience, index) => (
+                <ResumeElement
+                  key={index}
+                  title={experience.title}
+                  date={experience.date}
+                  content={experience.content}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-xl">
+            <h2 className="mb-4 text-xl md:text-2xl font-semibold">
+              Education
+            </h2>
+            <div className="space-y-4">
               {educations.map((education, index) => (
                 <ResumeElement
                   key={index}
@@ -145,50 +146,24 @@ const ResumePage = () => {
                 />
               ))}
             </div>
-          </article>
-          <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
-            <h2 className="text-2xl font-semibold mb-4">Core skills</h2>
-            <div className="space-y-4 text-sm text-white/80">
-              <div>
-                <p className="text-xs uppercase tracking-[0.35em] text-white/50 mb-1">
-                  Programming languages
-                </p>
-                <p>
-                  C, C++, Go, Python3, HTML, CSS, JavaScript, Java, Dart, React,
-                  Flutter, SQL, VB, Lisp, Prolog
-                </p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.35em] text-white/50 mb-1">
-                  General knowledge
-                </p>
-                <ul className="space-y-1">
-                  {generalKnowledge.map((topic) => (
-                    <li key={topic} className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/40"></span>
-                      <span>{topic}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          </section>
+
+          <section className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-xl lg:col-span-2">
+            <h2 className="mb-4 text-xl md:text-2xl font-semibold">
+              Extra-curricular activities
+            </h2>
+            <div className="space-y-4">
+              {extraCurricularActivities.map((activity, index) => (
+                <ResumeElement
+                  key={index}
+                  title={activity.title}
+                  date={activity.date}
+                  content={activity.content}
+                />
+              ))}
             </div>
-          </article>
-        </section>
-        <section className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl">
-          <h2 className="text-2xl font-semibold mb-4">
-            Extra-curricular activities
-          </h2>
-          <div className="space-y-6">
-            {extraCurricularActivities.map((activity, index) => (
-              <ResumeElement
-                key={index}
-                title={activity.title}
-                date={activity.date}
-                content={activity.content}
-              />
-            ))}
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
   );
