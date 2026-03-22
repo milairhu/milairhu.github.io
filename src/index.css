@@ -1,29 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-bg: #050816;
+    --color-card: rgba(15, 23, 42, 0.8);
+    --color-border: rgba(148, 163, 184, 0.25);
+    --color-text: #e2e8f0;
+    --color-muted: #94a3b8;
+    --color-accent: #38bdf8;
+    --color-accent-2: #c084fc;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-  height: 100%;
-  width: 100%;
+    margin: 0;
+    font-family:
+        "Space Grotesk",
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    background-image:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(59, 130, 246, 0.15),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 0%,
+            rgba(248, 113, 113, 0.15),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(129, 140, 248, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(135deg, #030712 0%, #040c1a 55%, #020617 100%);
+    background-attachment: fixed;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.04) 10%,
+        transparent 40%
+    );
+    opacity: 0.3;
+    mix-blend-mode: soft-light;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family:
+        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-#root{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    width: 100%;
+    padding: clamp(1rem, 2vw, 2rem);
+    box-sizing: border-box;
 }
