@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { ReactComponent as LeetCodeSVG } from "../../icons/leetcode.svg";
+import leetCodeIcon from "../../icons/leetcode.svg";
 
 const contactItems = [
   {
@@ -15,7 +15,7 @@ const contactItems = [
   },
   {
     label: "LeetCode",
-    icon: <LeetCodeSVG className="h-6 w-6" />,
+    icon: <img src={leetCodeIcon} alt="" className="h-6 w-6" />,
     href: "https://leetcode.com/HugoMil/",
   },
 ];

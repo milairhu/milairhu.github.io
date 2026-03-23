@@ -75,42 +75,42 @@ const ResumePage = () => {
   ];
 
   return (
-    <div className="h-full w-full text-white">
-      <div className="flex h-full flex-col gap-8 pb-2">
-        <header className="shrink-0">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div className="space-y-3">
-              <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-                Experience, education & community work
-              </h1>
-              <p className="max-w-3xl text-lg text-white/70">
-                Download a complete PDF version, then skim the key highlights
-                directly below.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <a
-                className="inline-flex items-center rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white/90 transition hover:border-white/60 hover:bg-white/10"
-                href="/fr_resume_MILAIR_Hugo.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CV PDF · FR
-              </a>
-              <a
-                className="inline-flex items-center rounded-full border border-sky-300/60 bg-sky-400/15 px-4 py-2 text-sm font-semibold text-sky-100 transition hover:border-sky-200 hover:bg-sky-400/25"
-                href="/en_resume_MILAIR_Hugo.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Resume PDF · EN
-              </a>
-            </div>
+    <div className="flex h-full min-h-0 w-full flex-col gap-8 overflow-hidden text-white">
+      <header className="shrink-0">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="space-y-3">
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+              Experience, education & community work
+            </h1>
+            <p className="max-w-3xl text-lg text-white/70">
+              Download a complete PDF version, then skim the key highlights
+              directly below.
+            </p>
           </div>
-        </header>
+          <div className="flex flex-wrap gap-2">
+            <a
+              className="inline-flex items-center rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white/90 transition hover:border-white/60 hover:bg-white/10"
+              href="/fr_resume_MILAIR_Hugo.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV PDF · FR
+            </a>
+            <a
+              className="inline-flex items-center rounded-full border border-sky-300/60 bg-sky-400/15 px-4 py-2 text-sm font-semibold text-sky-100 transition hover:border-sky-200 hover:bg-sky-400/25"
+              href="/en_resume_MILAIR_Hugo.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume PDF · EN
+            </a>
+          </div>
+        </div>
+      </header>
 
-        <div className="divider-line shrink-0" />
+      <div className="divider-line shrink-0" />
 
+      <div className="min-h-0 flex-1 overflow-y-auto pb-2 pr-1">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.72fr)]">
           <section className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-2xl">
             <div className="flex flex-wrap items-center justify-between gap-3">
