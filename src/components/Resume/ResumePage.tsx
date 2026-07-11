@@ -104,7 +104,7 @@ const ResumePage: FunctionComponent = () => (
           <a className="button" href="https://raw.githubusercontent.com/milairhu/resume-public/main/sre/Hugo_MILAIR_CV_fr.pdf" target="_blank" rel="noopener noreferrer">
             CV PDF · FR <span aria-hidden="true">↗</span>
           </a>
-          <a className="button button--primary" href="https://raw.githubusercontent.com/milairhu/resume-public/main/sre/Hugo_MILAIR_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <a className="button" href="https://raw.githubusercontent.com/milairhu/resume-public/main/sre/Hugo_MILAIR_CV.pdf" target="_blank" rel="noopener noreferrer">
             Resume PDF · EN <span aria-hidden="true">↗</span>
           </a>
         </>
