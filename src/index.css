@@ -1,87 +1,119 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --color-bg: #050816;
-    --color-card: rgba(15, 23, 42, 0.8);
-    --color-border: rgba(148, 163, 184, 0.25);
-    --color-text: #e2e8f0;
-    --color-muted: #94a3b8;
-    --color-accent: #38bdf8;
-    --color-accent-2: #c084fc;
+  color-scheme: dark;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --grid-color: rgba(130, 138, 128, 0.055);
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background: #050605;
 }
 
 body {
-    margin: 0;
-    font-family:
-        "Space Grotesk",
-        "Inter",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Fira Sans",
-        "Droid Sans",
-        "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    background-image:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(59, 130, 246, 0.15),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 85% 0%,
-            rgba(248, 113, 113, 0.15),
-            transparent 40%
-        ),
-        radial-gradient(
-            circle at 80% 80%,
-            rgba(129, 140, 248, 0.18),
-            transparent 45%
-        ),
-        linear-gradient(135deg, #030712 0%, #040c1a 55%, #020617 100%);
-    background-attachment: fixed;
-    min-height: 100%;
-    width: 100%;
-    position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: #c9cec8;
+  background-color: #050605;
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-attachment: fixed;
 }
 
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 0.04) 10%,
-        transparent 40%
-    );
-    opacity: 0.3;
-    mix-blend-mode: soft-light;
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.36);
 }
 
-code {
-    font-family:
-        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+::selection {
+  color: #050605;
+  background: #c8f65d;
 }
 
-#root {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    min-height: 100vh;
-    width: 100%;
-    padding: clamp(1rem, 2vw, 2rem);
-    box-sizing: border-box;
+@layer components {
+  .site-shell {
+    @apply flex min-h-screen flex-col bg-black/40;
+  }
+
+  .skip-link {
+    @apply fixed left-4 top-4 z-50 -translate-y-24 bg-signal px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-black transition-transform focus:translate-y-0;
+  }
+
+  .nav-link {
+    @apply relative inline-flex px-3 py-2 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-ink-400 transition-colors hover:text-ink-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal sm:px-4;
+  }
+
+  .nav-link--active {
+    @apply text-ink-50;
+  }
+
+  .nav-link--active::before {
+    @apply absolute left-1/2 top-0 h-px w-5 -translate-x-1/2 bg-signal content-[''];
+  }
+
+  .eyebrow {
+    @apply font-mono text-[0.68rem] font-medium uppercase tracking-[0.18em] text-signal;
+  }
+
+  .button {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 border border-ink-600 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.12em] text-ink-100 transition-colors hover:border-ink-300 hover:bg-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal;
+  }
+
+  .button--primary {
+    @apply border-signal bg-signal text-black hover:border-signal-light hover:bg-signal-light;
+  }
+
+  .text-link {
+    @apply border-b border-ink-600 text-ink-100 transition-colors hover:border-signal hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal;
+  }
+
+  .project-card {
+    @apply flex min-h-[23rem] flex-col bg-black p-6 transition-colors hover:bg-ink-950 sm:p-8;
+  }
+
+  .project-card > :last-child {
+    @apply mt-auto pt-9;
+  }
+
+  .page-enter {
+    animation: page-enter 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,78 +1,53 @@
-import React from "react";
+import type { FunctionComponent } from "react";
 import { FaGithub } from "react-icons/fa";
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
+import Tag from "../UI/Tag";
 
-interface ProjectCardProps {
+export interface Project {
   title: string;
   series?: string;
   description: string;
   link: string;
-  technos: string[];
-  Icon: IconType;
-  accent: string;
+  technologies: string[];
+  icon: IconType;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  title,
-  series,
-  description,
-  link,
-  technos,
-  Icon,
-  accent,
-}) => {
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+
+const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project, index }) => {
+  const Icon = project.icon;
+
   return (
-    <div className="group relative flex h-full w-full flex-col rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10">
-      <div className="flex items-center justify-between gap-4">
-        <div className="flex items-center gap-4">
-          <div className="relative">
-            <div
-              className="absolute -inset-1 rounded-3xl opacity-70 blur-xl transition duration-500 group-hover:opacity-90"
-              style={{ background: accent }}
-            />
-            <div className="relative flex h-16 w-16 items-center justify-center rounded-3xl border border-white/20 bg-white/10 text-white">
-              <Icon size={30} />
-            </div>
-          </div>
-          <div className="min-w-0">
-            {series && (
-              <p className="mb-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-cyan-200/70">
-                {series}
-              </p>
-            )}
-            <h3 className="text-2xl font-semibold">{title}</h3>
-          </div>
-        </div>
+    <article className="project-card group">
+      <div className="flex items-start justify-between gap-5">
+        <span className="font-mono text-xs tracking-[0.12em] text-ink-500" aria-hidden="true">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <Icon className="text-2xl text-ink-500 transition-colors group-hover:text-signal" aria-hidden="true" />
       </div>
-      <p className="mt-5 flex-1 text-sm text-white/70 leading-relaxed">
-        {description}
-      </p>
-      <div className="mt-5 flex flex-wrap gap-2">
-        {technos.map((tech) => (
-          <span
-            key={tech}
-            className="tag-pill text-xs text-white/90 border-white/20 bg-white/10"
-          >
-            {tech}
-          </span>
-        ))}
+      <div className="mt-10">
+        {project.series && <p className="eyebrow mb-3">{project.series}</p>}
+        <h2 className="font-mono text-xl font-medium tracking-[-0.025em] text-ink-50 sm:text-2xl">
+          {project.title}
+        </h2>
+        <p className="mt-5 text-sm leading-7 text-ink-400">{project.description}</p>
       </div>
-      <div className="mt-6 flex items-center justify-between">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/60">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Live repo
-        </div>
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-white"
-        >
-          <span>View on GitHub</span>
-          <FaGithub size={20} />
-        </a>
+      <div className="mt-8 flex flex-wrap gap-2">
+        {project.technologies.map((technology) => <Tag key={technology}>{technology}</Tag>)}
       </div>
-    </div>
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-9 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] text-ink-300 transition-colors hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+        aria-label={`View ${project.title} on GitHub`}
+      >
+        <FaGithub aria-hidden="true" /> View repository <span aria-hidden="true">↗</span>
+      </a>
+    </article>
   );
 };
 

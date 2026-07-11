@@ -1,45 +1,51 @@
-import React from "react";
+import type { FunctionComponent } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import leetCodeIcon from "../../icons/leetcode.svg";
 
-const contactItems = [
-  {
-    label: "GitHub",
-    icon: <FaGithub size={22} />,
-    href: "https://github.com/milairhu",
-  },
-  {
-    label: "LinkedIn",
-    icon: <FaLinkedin size={22} />,
-    href: "https://www.linkedin.com/in/hugo-milair/",
-  },
-  {
-    label: "LeetCode",
-    icon: <img src={leetCodeIcon} alt="" className="h-6 w-6" />,
-    href: "https://leetcode.com/HugoMil/",
-  },
+interface ContactItem {
+  label: string;
+  detail: string;
+  href: string;
+  icon: "github" | "linkedin" | "leetcode";
+}
+
+const contactItems: ContactItem[] = [
+  { label: "GitHub", detail: "@milairhu", href: "https://github.com/milairhu", icon: "github" },
+  { label: "LinkedIn", detail: "/in/hugo-milair", href: "https://www.linkedin.com/in/hugo-milair/", icon: "linkedin" },
+  { label: "LeetCode", detail: "@HugoMil", href: "https://leetcode.com/HugoMil/", icon: "leetcode" },
 ];
 
-const ContactBar: React.FC = () => {
-  return (
-    <div className="flex flex-wrap items-center gap-4">
-      {contactItems.map(({ label, icon, href }) => (
+interface ContactIconProps {
+  type: ContactItem["icon"];
+}
+
+const ContactIcon: FunctionComponent<ContactIconProps> = ({ type }) => {
+  if (type === "github") return <FaGithub aria-hidden="true" />;
+  if (type === "linkedin") return <FaLinkedin aria-hidden="true" />;
+  return <img src={leetCodeIcon} alt="" className="h-4 w-4 brightness-0 invert" />;
+};
+
+const ContactBar: FunctionComponent = () => (
+  <ul className="grid gap-px bg-ink-700 sm:grid-cols-3">
+    {contactItems.map(({ label, detail, href, icon }) => (
+      <li key={label} className="bg-black">
         <a
-          key={label}
           href={href}
           target="_blank"
-          rel="noreferrer"
-          className="group relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/20"
-          aria-label={label}
+          rel="noopener noreferrer"
+          className="group flex items-center gap-3 px-4 py-4 text-ink-300 transition-colors hover:bg-ink-900 hover:text-ink-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-signal"
         >
-          <span className="absolute -bottom-7 text-xs font-semibold text-white/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            {label}
+          <span className="text-base text-ink-400 transition-colors group-hover:text-signal">
+            <ContactIcon type={icon} />
           </span>
-          {icon}
+          <span>
+            <span className="block font-mono text-xs uppercase tracking-[0.12em]">{label}</span>
+            <span className="mt-0.5 block text-xs text-ink-400">{detail}</span>
+          </span>
         </a>
-      ))}
-    </div>
-  );
-};
+      </li>
+    ))}
+  </ul>
+);
 
 export default ContactBar;
