@@ -5,7 +5,7 @@ const ResumePage = () => {
   const professionalExperiences = [
     {
       title: "Site Reliability Engineer, EVERTRUST, Paris, France",
-      date: "01/2026 – Present",
+      date: "09/2024 – Present",
       content: [
         "Provision and improve highly available AWS EKS infrastructure with Terraform, Karpenter, Argo CD and Kubernetes.",
         "Develop the SaaS control plane and internal SRE tooling in Go, including deployment automation and Temporal workflows.",
@@ -15,12 +15,15 @@ const ResumePage = () => {
     },
     {
       title:
-        "SRE / DevOps Engineer & IT Compliance Engineer, EVERTRUST, Paris, France",
-      date: "09/2024 – 12/2025",
+        "IT Compliance Engineer, EVERTRUST, Paris, France",
+      date: "09/2024 – 03/2026",
       content: [
         "Led the company-wide security programme that delivered EVERTRUST's first ISO 27001 certification.",
         "Maintained the security policy framework, performed risk assessments and coordinated remediation work.",
         "Led the migration from GitLab to GitHub and introduced secure-by-default CI/CD controls, containerised tests and automated security scanning.",
+        "Prepared the company for audits and conducted remediation work for identified non-conformities.",
+        "Aligned the company's process and data inventories with GDPR requirements.",
+        "Responded to RFPs questionnaires for security and technical requirements prior to contract signing.",
       ],
     },
     {
@@ -56,7 +59,6 @@ const ResumePage = () => {
   const skillsAndCertifications = [
     {
       title: "Cloud & platform engineering",
-      date: "CORE TOOLKIT",
       content: [
         "AWS, GCP, Kubernetes, Docker, Argo CD and Terraform.",
         "Go, Python and Bash for automation and internal tooling.",
@@ -64,10 +66,19 @@ const ResumePage = () => {
     },
     {
       title: "Delivery, observability & security",
-      date: "CORE TOOLKIT",
       content: [
-        "GitHub Actions, CI/CD governance and automated vulnerability scanning.",
-        "Grafana LGTM, Alloy, OpenCost, ISO 27001, risk assessment and security audits.",
+        "GitHub Actions, CI/CD and automated vulnerability scanning.",
+        "Grafana LGTM, Alloy, OpenCost, and dozens of other open-source tools.",
+      ],
+    },
+    {
+      title: "GRC and ISO 27001 Lead Implementer",
+      content: [
+        "ISO 27001 norm.",
+        "ISO 27005 risk management framework.",
+        "Vanta.",
+        "GDPR.",
+        "Microsoft IAM (Entra), MDM (Intune), EDR (Microsoft Defender for Endpoint)."
       ],
     },
     {
@@ -89,8 +100,7 @@ const ResumePage = () => {
               Platform engineering, reliability & security
             </h1>
             <p className="max-w-3xl text-lg text-white/70">
-              A career spanning cloud infrastructure, SaaS operations and ISO
-              27001 governance. Download a PDF or explore the highlights below.
+              Blending Cloud engineering, DevOps philosophy and security knowledge. Download a PDF or explore the highlights below.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
