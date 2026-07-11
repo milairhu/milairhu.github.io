@@ -18,7 +18,7 @@ const HomePage: React.FC<HomeProps> = ({ setCurr }) => {
           </div>
           <div className="space-y-3 text-lg text-white/80">
             <p>
-              French computer science engineer at the{" "}
+              Site reliability engineer based in Paris and a graduate of the{" "}
               <a
                 className="link-underlined"
                 href="https://www.utc.fr/"
@@ -27,10 +27,10 @@ const HomePage: React.FC<HomeProps> = ({ setCurr }) => {
               >
                 Université de Technologie de Compiègne
               </a>
-              , specialising in IT systems, DevOps and security governance.
+              , focused on reliable cloud platforms, automation and security.
             </p>
             <p>
-              Currently growing the IT Risk Governance & DevOps practice at{" "}
+              At{" "}
               <a
                 className="link-underlined"
                 href="https://evertrust.io/"
@@ -38,30 +38,34 @@ const HomePage: React.FC<HomeProps> = ({ setCurr }) => {
                 rel="noreferrer"
               >
                 EVERTRUST
-              </a>{" "}
-              in Paris, I lead ISO 27001 compliance operation and take part
-              tackling the platform and infrastructure engineering challenges.
+              </a>
+              , I operate a Kubernetes-based SaaS platform, build AWS
+              infrastructure and deployment automation, and improve
+              observability and cost visibility. My earlier compliance work led
+              the company&apos;s first ISO 27001 certification.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">
-                Compliance
+                SRE
               </p>
               <p className="text-xl font-semibold mt-1">
-                ISO 27001 Lead Implementor
+                Kubernetes platform engineering
               </p>
               <p className="text-sm text-white/60 mt-1">
-                Risk Governance, Risk Analysis, Remediation Plans
+                Helping companies build and scale cloud native applications and reliable infrastructures
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">
-                SRE
+                Compliance
               </p>
-              <p className="text-xl font-semibold mt-1">Platform engineering</p>
+              <p className="text-xl font-semibold mt-1">
+                ISO 27001 Lead Implementer
+              </p>
               <p className="text-sm text-white/60 mt-1">
-                Automation, cloud and observability
+                Security policies, risk assessment and remediation
               </p>
             </div>
           </div>
@@ -83,19 +87,21 @@ const HomePage: React.FC<HomeProps> = ({ setCurr }) => {
               />
               <div className="text-center space-y-1">
                 <p className="text-lg font-semibold">
-                  Compliance & SRE engineer
+                  Site reliability engineer
                 </p>
                 <p className="text-sm text-white/60">UTC • EVERTRUST</p>
               </div>
               <div className="flex flex-wrap justify-start gap-2">
-                {["IT Risk Governance", "DevOps", "Cloud"].map((skill) => (
-                  <span
-                    key={skill}
-                    className="tag-pill text-white/90 border-white/20 bg-white/10"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {["Platform Engineering", "Go", "Automation", "Kubernetes", "Observability / Monitoring", "CI/CD", "ISO 27001"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="tag-pill text-white/90 border-white/20 bg-white/10"
+                    >
+                      {skill}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           </div>

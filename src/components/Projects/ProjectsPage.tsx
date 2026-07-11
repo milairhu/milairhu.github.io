@@ -10,10 +10,43 @@ import {
   PiPuzzlePieceDuotone,
   PiSoccerBallDuotone,
   PiGlobeHemisphereEastDuotone,
+  PiFileTextDuotone,
+  PiDatabaseDuotone,
+  PiFlowArrowDuotone,
 } from "react-icons/pi";
 
 const ProjectsPage = () => {
   const projectsList = [
+    {
+      title: "Compliance Form Filler",
+      series: "Compliance tooling · Answering",
+      description:
+        "A Go CLI that turns compliance questions from a text file into ready-to-use CSV answers. It retrieves relevant policies from Qdrant, relies on the corpus API for ingestion and embeddings, and prompts a locally hosted LLM through Ollama.",
+      link: "https://github.com/milairhu/compliance-form-filler",
+      Icon: PiFileTextDuotone,
+      accent: "linear-gradient(135deg,#22d3ee,#3b82f6)",
+      technos: ["Go", "Qdrant", "Ollama", "Docker"],
+    },
+    {
+      title: "Compliance Corpus Ingestor",
+      series: "Compliance tooling · Retrieval",
+      description:
+        "The Python API behind the retrieval layer: it chunks and vectorizes policies, RFP responses and supporting documents, ingests or clears the corpus in Qdrant, and exposes on-demand sentence embeddings.",
+      link: "https://github.com/milairhu/compliance-corpus-ingestor",
+      Icon: PiDatabaseDuotone,
+      accent: "linear-gradient(135deg,#3b82f6,#6366f1)",
+      technos: ["Python", "FastAPI", "Sentence Transformers", "Qdrant"],
+    },
+    {
+      title: "Transformer API",
+      series: "Compliance tooling · Embeddings",
+      description:
+        "A focused Python REST service exploring the embedding concern in isolation. Its /embed endpoint uses all-MiniLM-L6-v2 to turn batches of text into vectors ready to be stored in or queried against Qdrant.",
+      link: "https://github.com/milairhu/transformer-api",
+      Icon: PiFlowArrowDuotone,
+      accent: "linear-gradient(135deg,#6366f1,#a855f7)",
+      technos: ["Python", "FastAPI", "Sentence Transformers", "Docker"],
+    },
     {
       title: "QuantUT",
       description:
@@ -106,8 +139,9 @@ const ProjectsPage = () => {
             Projects that blend rigor and curiosity
           </h1>
           <p className="text-lg text-white/70 max-w-3xl">
-            From quantum frameworks to playful AI side quests — here is a
-            curated collection of experiments, tools and systems I designed to
+            From a family of complementary compliance tools — embeddings,
+            corpus retrieval and automated answers — to quantum frameworks and
+            playful AI side quests, here are the tools and systems I build to
             learn faster and ship better infrastructure.
           </p>
         </div>
@@ -118,6 +152,7 @@ const ProjectsPage = () => {
           <ProjectCard
             key={project.title}
             title={project.title}
+            series={project.series}
             description={project.description}
             link={project.link}
             technos={project.technos}

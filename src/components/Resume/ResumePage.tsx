@@ -2,31 +2,40 @@ import React from "react";
 import ResumeElement from "./ResumeElement";
 
 const ResumePage = () => {
-  const professionnalExperiences = [
+  const professionalExperiences = [
+    {
+      title: "Site Reliability Engineer, EVERTRUST, Paris, France",
+      date: "01/2026 – Present",
+      content: [
+        "Provision and improve highly available AWS EKS infrastructure with Terraform, Karpenter, Argo CD and Kubernetes.",
+        "Develop the SaaS control plane and internal SRE tooling in Go, including deployment automation and Temporal workflows.",
+        "Improve observability and cost visibility with Grafana, Mimir, Loki, Tempo, Alloy and OpenCost.",
+        "Take part in on-call incident response and support production operations across networking, storage, databases and security services.",
+      ],
+    },
     {
       title:
-        "IT Risk Governance & DevOps, Internship at EVERTRUST, Paris, FRANCE",
+        "SRE / DevOps Engineer & IT Compliance Engineer, EVERTRUST, Paris, France",
+      date: "09/2024 – 12/2025",
+      content: [
+        "Led the company-wide security programme that delivered EVERTRUST's first ISO 27001 certification.",
+        "Maintained the security policy framework, performed risk assessments and coordinated remediation work.",
+        "Led the migration from GitLab to GitHub and introduced secure-by-default CI/CD controls, containerised tests and automated security scanning.",
+      ],
+    },
+    {
+      title:
+        "IT Risk Compliance & DevOps Intern, EVERTRUST, Paris, France",
       date: "02/2024 – 08/2024",
       content: [
-        "Established and matured security policies for the company to comply with ISO 27001.",
-        "Participated to the infrastrusture improvement and to the automation of processes.",
+        "Initiated the ISO 27001 implementation programme and developed supporting automation tools.",
       ],
     },
     {
-      title: "Software Developer, Internship at InTech SA, Kayl, LUXEMBURG",
+      title: "Full-stack Software Development Intern, InTech, Kayl, Luxembourg",
       date: "09/2022 – 02/2023",
       content: [
-        "Developed with a team both backend and frontend of a web app for internal usage.",
-        "Adapted to AGILE framework.",
-      ],
-    },
-    {
-      title: "Crew member, McDonald’s Restaurant of Semécourt, FRANCE",
-      date: "Summer 2022",
-      content: [
-        "Welcomed customers",
-        "Prepared orders",
-        "Worked within a team",
+        "Contributed to an internal invoicing application built with React and Spring Boot in an Agile team.",
       ],
     },
   ];
@@ -34,42 +43,39 @@ const ResumePage = () => {
   const educations = [
     {
       title:
-        "Master’s Degree in Computer Engineering, Université de Technologie de Compiègne, Compiègne, FRANCE",
-      date: "02/2020 - 06/2024",
+        "Engineering Degree in Computer Science, Université de Technologie de Compiègne (UTC), Compiègne, France",
+      date: "02/2020 – 08/2024 · GPA 5.00/5.00",
     },
     {
       title:
-        "High School Diploma, concentration in sciences, minors Biology and English, Lycée Fabert, Metz, FRANCE",
-      date: "2016-2019, with very high honours",
+        "Preparatory Classes for Engineering Schools (MPSI), Lycée Fabert, Metz, France",
+      date: "09/2019 – 02/2020",
     },
   ];
 
-  const extraCurricularActivities = [
+  const skillsAndCertifications = [
     {
-      title:
-        "Junior UTC, Member of the Quality Pole of my university‘s Junior-Enterprise",
-      date: "09/2023 - 03-2024",
+      title: "Cloud & platform engineering",
+      date: "CORE TOOLKIT",
       content: [
-        "Corrected and validated official documents and contracts emitted by Junior UTC",
-        "Audited internal pieces of work",
-        "Participated in bi-weekly internal meetings",
+        "AWS, GCP, Kubernetes, Docker, Argo CD and Terraform.",
+        "Go, Python and Bash for automation and internal tooling.",
       ],
     },
     {
-      title: "Candide, General Secretary of a Tutoring Association",
-      date: "09/2021 - 03/2022",
+      title: "Delivery, observability & security",
+      date: "CORE TOOLKIT",
       content: [
-        "Headed contacts with potential and current partnerships",
-        "Led and reported on internal meetings",
-        "Tutored after-school class",
+        "GitHub Actions, CI/CD governance and automated vulnerability scanning.",
+        "Grafana LGTM, Alloy, OpenCost, ISO 27001, risk assessment and security audits.",
       ],
     },
     {
-      title: "Tennis",
-      date: "Since 2013",
+      title: "Professional certifications",
+      date: "2025 – 2026",
       content: [
-        "Participate to bi-weekly trainings",
-        "Play at competitive levels.",
+        "ISO 27001 Lead Implementer — HS2, 2025.",
+        "Introduction to Kubernetes (LFS158) — Linux Foundation, 2026.",
       ],
     },
   ];
@@ -80,17 +86,17 @@ const ResumePage = () => {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="space-y-3">
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Experience, education & community work
+              Platform engineering, reliability & security
             </h1>
             <p className="max-w-3xl text-lg text-white/70">
-              Download a complete PDF version, then skim the key highlights
-              directly below.
+              A career spanning cloud infrastructure, SaaS operations and ISO
+              27001 governance. Download a PDF or explore the highlights below.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
             <a
               className="inline-flex items-center rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white/90 transition hover:border-white/60 hover:bg-white/10"
-              href="/fr_resume_MILAIR_Hugo.pdf"
+              href="https://raw.githubusercontent.com/milairhu/resume-public/main/sre/Hugo_MILAIR_CV_fr.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -98,7 +104,7 @@ const ResumePage = () => {
             </a>
             <a
               className="inline-flex items-center rounded-full border border-sky-300/60 bg-sky-400/15 px-4 py-2 text-sm font-semibold text-sky-100 transition hover:border-sky-200 hover:bg-sky-400/25"
-              href="/en_resume_MILAIR_Hugo.pdf"
+              href="https://raw.githubusercontent.com/milairhu/resume-public/main/sre/Hugo_MILAIR_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -122,7 +128,7 @@ const ResumePage = () => {
               </span>
             </div>
             <div className="mt-5 space-y-4">
-              {professionnalExperiences.map((experience, index) => (
+              {professionalExperiences.map((experience, index) => (
                 <ResumeElement
                   key={index}
                   title={experience.title}
@@ -150,10 +156,10 @@ const ResumePage = () => {
 
           <section className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-xl lg:col-span-2">
             <h2 className="mb-4 text-xl md:text-2xl font-semibold">
-              Extra-curricular activities
+              Skills & certifications
             </h2>
             <div className="space-y-4">
-              {extraCurricularActivities.map((activity, index) => (
+              {skillsAndCertifications.map((activity, index) => (
                 <ResumeElement
                   key={index}
                   title={activity.title}

@@ -4,6 +4,7 @@ import { IconType } from "react-icons";
 
 interface ProjectCardProps {
   title: string;
+  series?: string;
   description: string;
   link: string;
   technos: string[];
@@ -13,6 +14,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
+  series,
   description,
   link,
   technos,
@@ -33,6 +35,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           </div>
           <div className="min-w-0">
+            {series && (
+              <p className="mb-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-cyan-200/70">
+                {series}
+              </p>
+            )}
             <h3 className="text-2xl font-semibold">{title}</h3>
           </div>
         </div>
