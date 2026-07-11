@@ -136,13 +136,10 @@ const ProjectsPage = () => {
       <div className="shrink-0 space-y-3">
         <div className="flex flex-col gap-3">
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-            Projects that blend rigor and curiosity
+            Projects
           </h1>
           <p className="text-lg text-white/70 max-w-3xl">
-            From a family of complementary compliance tools — embeddings,
-            corpus retrieval and automated answers — to quantum frameworks and
-            playful AI side quests, here are the tools and systems I build to
-            learn faster and ship better infrastructure.
+            A bunch of projects I've worked on, from compliance tools to quantum framework and AI side quests.
           </p>
         </div>
       </div>

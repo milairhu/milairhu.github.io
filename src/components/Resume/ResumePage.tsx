@@ -123,9 +123,6 @@ const ResumePage = () => {
               <h2 className="text-xl md:text-2xl font-semibold">
                 Professional experience
               </h2>
-              <span className="tag-pill text-xs text-white/80 border-white/20 bg-white/10">
-                Security · DevOps
-              </span>
             </div>
             <div className="mt-5 space-y-4">
               {professionalExperiences.map((experience, index) => (
